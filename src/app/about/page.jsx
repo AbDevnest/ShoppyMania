@@ -16,7 +16,7 @@ export default function AboutPage() {
     },
     {
       name: "Abhishek",
-      role: "Full Stack Developer",
+      role: "Developer",
       image: "/images/Abhi.png",
     },
   ];
@@ -26,6 +26,18 @@ export default function AboutPage() {
 
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
+          <div className="block md:hidden">
+            <h2 className="text-3xl font-bold">Who We Are</h2>
+            <p className="mt-6 leading-relaxed text-gray-600">
+              ShoppyMania is a next-gen ecommerce platform focused on
+              delivering speed, quality, and affordability.
+            </p>
+            <p className="mt-4 text-gray-600">
+              We blend technology with customer needs to create an effortless
+              shopping journey.
+            </p>
+          </div>
+
           <Image
             src="/images/Story.webp"
             width={500}
@@ -34,7 +46,7 @@ export default function AboutPage() {
             className="h-auto w-full rounded-2xl shadow-lg"
           />
 
-          <div>
+          <div className=" hidden md:block">
             <h2 className="text-3xl font-bold">Who We Are</h2>
             <p className="mt-6 leading-relaxed text-gray-600">
               ShoppyMania is a next-gen ecommerce platform focused on
@@ -48,20 +60,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 text-center">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold">Our Mission</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-gray-600">
-            To revolutionize online shopping by making it faster, smarter, and
-            more reliable for everyone.
-          </p>
-        </div>
-      </section>
-
       <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-3xl font-bold">Our Team</h2>
-
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <h2 className=" text-3xl font-bold">Our Team</h2>
+            <p className="max-w-2xl m-auto leading-relaxed text-gray-600">
+              A dedicated team combining leadership, management, and development to deliver a smooth and reliable shopping experience.
+            </p>
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {team.map((member, index) => (
               <div
