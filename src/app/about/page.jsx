@@ -3,23 +3,23 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
-const team = [
-  {
-    name: "Rohit Sharma",
-    role: "CEO",
-    image: "/images/team1.jpg",
-  },
-  {
-    name: "Kushal Verma",
-    role: "Manager",
-    image: "/images/team3.jpg",
-  },
-  {
-    name: "Abhishek",
-    role: "Full Stack Developer",
-    image: "/images/Abhi.png",
-  },
-];
+  const team = [
+    {
+      name: "Rohit Sharma",
+      role: "CEO",
+      image: "/images/Team1.jpg",
+    },
+    {
+      name: "Kushal Verma",
+      role: "Manager",
+      image: "/images/Team3.jpg",
+    },
+    {
+      name: "Abhishek",
+      role: "Full Stack Developer",
+      image: "/images/Abhi.png",
+    },
+  ];
   return (
     <div className="bg-gray-50 text-[#37311d]">
       <Hero page="about" />
@@ -31,7 +31,7 @@ const team = [
             width={500}
             height={300}
             alt="ShoppyMania team preparing customer orders"
-            className="rounded-2xl shadow-lg"
+            className="h-auto w-full rounded-2xl shadow-lg"
           />
 
           <div>
@@ -58,36 +58,36 @@ const team = [
         </div>
       </section>
 
-<section className="bg-gray-50 py-20">
-  <div className="mx-auto max-w-7xl px-6">
-    <h2 className="text-center text-3xl font-bold">Our Team</h2>
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-center text-3xl font-bold">Our Team</h2>
 
-    <div className="mt-12 grid gap-10 md:grid-cols-3">
-      {team.map((member, index) => (
-        <div
-          key={index}
-          className="bg-white shadow-md rounded-2xl p-6 text-center transition hover:shadow-xl hover:-translate-y-2"
-        >
-          <Image
-            src={member.image}
-            width={200}
-            height={200}
-            alt={member.name}
-            className="mx-auto rounded-full object-cover object-top h-40 w-40 shadow-lg"
-          />
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
+            {team.map((member, index) => (
+              <div
+                key={member.name}
+                className="rounded-2xl bg-white p-6 text-center shadow-md transition hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full shadow-lg">
+                  <Image
+                    src={member.image}
+                    fill
+                    sizes="160px"
+                    alt={member.name}
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="object-cover object-top"
+                  />
+                </div>
 
-          <h3 className="mt-4 font-semibold text-lg">
-            {member.name}
-          </h3>
+                <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
 
-          <p className="text-sm text-gray-500">
-            {member.role}
-          </p>
+                <p className="text-sm text-gray-500">{member.role}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       <section className="bg-[#37311d] text-[#f3f4f6] py-16 text-center">
         <div className="mx-auto max-w-7xl px-6">
@@ -120,7 +120,7 @@ const team = [
             width={500}
             height={400}
             alt="ShoppyMania offline store"
-            className="rounded-2xl shadow-lg"
+            className="h-auto w-full rounded-2xl shadow-lg"
           />
         </div>
       </section>

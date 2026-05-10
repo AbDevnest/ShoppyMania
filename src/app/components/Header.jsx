@@ -169,11 +169,11 @@ export default function Header() {
         >
           <div className="flex items-center justify-between border-b p-4">
             <Image
-              src="/images/logo.png"
+              src="/images/Mainlogo.png"
               width={150}
               height={60}
               alt="ShoppyMania logo"
-              className="object-contain"
+              className="h-10 w-auto object-contain"
             />
             <button
               type="button"

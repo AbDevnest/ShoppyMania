@@ -183,7 +183,7 @@ export default function Home() {
             alt="ShoppyMania team packing online shopping orders"
             width={640}
             height={420}
-            className="rounded-2xl shadow-lg"
+            className="h-auto w-full rounded-2xl shadow-lg"
           />
 
           <div>
@@ -328,9 +328,9 @@ export default function Home() {
                 <Image
                   src={item.img}
                   alt={item.title}
-                  width={400}
-                  height={380}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute bottom-0 p-6 text-white transition duration-500 group-hover:translate-y-0 sm:translate-y-6">
