@@ -92,13 +92,13 @@ function Hero({ page = "home" }) {
 
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-amber-50">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-2 md:py-20">
-        <div>
-          <span className="mb-4 inline-block rounded-full bg-[#0f172a] px-4 py-1 text-sm text-gray-100">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-2 lg:gap-12 lg:py-20">
+        <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
+          <span className="mb-4 inline-block rounded-full bg-[#0f172a] px-4 py-1 text-xs font-semibold text-gray-100 sm:text-sm">
             {content.badge}
           </span>
 
-          <h1 className="text-4xl font-bold leading-tight text-[#37311d] md:text-5xl">
+          <h1 className="text-3xl font-bold leading-tight text-[#37311d] sm:text-4xl lg:text-5xl">
             {beforeTitle}
             {highlightedTitle && (
               <span className="text-[#f59e0b]">
@@ -108,27 +108,27 @@ function Hero({ page = "home" }) {
             {afterTitle}
           </h1>
 
-          <p className="mt-6 text-lg leading-relaxed text-gray-600">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:mx-0">
             {content.description}
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Link
               href={content.primaryHref}
-              className="rounded-lg bg-[#f59e0b] px-8 py-3 text-center font-semibold text-white transition hover:bg-[#d97706]"
+              className="rounded-lg bg-[#f59e0b] px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#d97706] sm:px-8 sm:text-base"
             >
               {content.primaryLabel}
             </Link>
             <Link
               href={content.secondaryHref}
-              className="rounded-lg border border-[#f59e0b] px-8 py-3 text-center font-semibold text-[#d97706] transition hover:border-[#0f172a] hover:bg-[#0f172a] hover:text-white"
+              className="rounded-lg border border-[#f59e0b] px-6 py-3 text-center text-sm font-semibold text-[#d97706] transition hover:border-[#0f172a] hover:bg-[#0f172a] hover:text-white sm:px-8 sm:text-base"
             >
               {content.secondaryLabel}
             </Link>
           </div>
         </div>
 
-        <div className="flex justify-end">
+        <div className="mx-auto flex w-full max-w-xl justify-center lg:justify-end">
           <Image
             src={content.image}
             alt={content.imageAlt}

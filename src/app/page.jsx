@@ -114,8 +114,8 @@ export default function Home() {
     <div className="bg-gray-50 text-[#37311d]">
       <Hero page="home" />
 
-      <section className="bg-[#0f172a] text-[#f3f4f6] py-12">
-        <div className="mx-auto grid max-w-7xl items-center gap-6 px-6 md:grid-cols-2">
+      <section className="bg-[#0f172a] py-10 text-[#f3f4f6] sm:py-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-6 px-4 sm:px-6 md:grid-cols-[1fr_auto]">
           <div>
             <h2 className="text-2xl font-bold md:text-3xl">
               Flat 30% OFF on Electronics
@@ -125,13 +125,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 md:justify-end">
-            <span className="rounded-lg bg-white px-4 py-2 font-semibold text-[#0f172a]">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-end">
+            <span className="rounded-lg bg-white px-4 py-2 text-center text-sm font-semibold text-[#0f172a] sm:text-base">
               Free Delivery above Rs. 499
             </span>
             <Link
               href="/product"
-              className="bg-[#f59e0b] text-white transition hover:bg-[#d97706] rounded-lg px-6 py-2 font-semibold"
+              className="rounded-lg bg-[#f59e0b] px-6 py-2 text-center font-semibold text-white transition hover:bg-[#d97706]"
             >
               Shop Now
             </Link>
@@ -139,8 +139,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold md:text-4xl">
               Shop by <span className="text-[#f59e0b]">Category</span>
@@ -150,7 +150,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 gap-10 text-center md:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-6 text-center sm:gap-8 lg:grid-cols-4">
             {categories.map((cat) => (
               <div key={cat.id} className="flex flex-col items-center">
                 <div className="border border-gray-200 bg-white shadow-sm flex h-36 w-36 items-center justify-center rounded-full md:h-40 md:w-40">
@@ -176,8 +176,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Image
             src="/images/Story.webp"
             alt="ShoppyMania team packing online shopping orders"
@@ -204,8 +204,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3">
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-3">
           {[
             ["Fast Delivery", "Quick shipping across India within 2-5 days."],
             ["Secure Payments", "Safe checkout with trusted gateways."],
@@ -222,13 +222,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="text-center text-3xl font-bold">
             Trending <span className="text-[#f59e0b]">Products</span>
           </h2>
 
-          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
             {productError && (
               <p className="col-span-full rounded-lg border border-red-200 bg-red-50 p-4 text-center text-sm text-red-600">
                 {productError}
@@ -252,8 +252,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2">
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2">
           <div className="border border-gray-200 bg-white shadow-sm rounded-2xl p-6">
             <h3 className="text-xl font-semibold">
               Quality Products
@@ -272,8 +272,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-4">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             ["Verified Data", "Every product is normalized from DummyJSON."],
             [
@@ -294,9 +294,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#37311d] text-[#f3f4f6] py-16 text-center">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold">
+      <section className="bg-[#37311d] py-14 text-center text-[#f3f4f6] sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold sm:text-3xl">
             Start Shopping with{" "}
             <span className="text-[#f59e0b]">ShoppyMania</span>
           </h2>
@@ -310,8 +310,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="text-center text-3xl font-bold md:text-4xl">
             Life at <span className="text-[#f59e0b]">ShoppyMania</span>
           </h2>
@@ -345,8 +345,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <h2 className="text-center text-3xl font-bold">
             Frequently Asked <span className="text-[#f59e0b]">Questions</span>
           </h2>

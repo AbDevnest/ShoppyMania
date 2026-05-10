@@ -107,18 +107,21 @@ export default function ProductDetailPage() {
 
   return (
     <div>
-      <section className="bg-gray-50 text-[#37311d] py-12">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2">
+      <section className="bg-gray-50 py-10 text-[#37311d] sm:py-12">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-10">
           <div>
-          <div className="border border-gray-200 bg-white shadow-sm rounded-2xl p-6">
-            <Image
-              src={activeImage || product.image}
-              alt={product.title}
-              width={620}
-              height={520}
-              priority
-              className="h-[420px] w-full object-contain"
-            />
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+            <div className="relative h-[320px] sm:h-[380px] lg:h-[420px]">
+              <Image
+                src={activeImage || product.image}
+                alt={product.title}
+                fill
+                priority
+                loading="eager"
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {product.images.length > 1 && (
@@ -132,24 +135,26 @@ export default function ProductDetailPage() {
                     activeImage === image ? "border-[#f59e0b]" : "border-gray-200"
                   }`}
                 >
-                  <Image
-                    src={image}
-                    alt={`${product.title} preview`}
-                    width={120}
-                    height={90}
-                    className="h-20 w-full object-contain"
-                  />
+                  <span className="relative block h-20">
+                    <Image
+                      src={image}
+                      alt={`${product.title} preview`}
+                      fill
+                      sizes="25vw"
+                      className="object-contain"
+                    />
+                  </span>
                 </button>
               ))}
             </div>
           )}
           </div>
 
-          <div className="border border-gray-200 bg-white shadow-sm rounded-2xl p-6">
+          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
           <p className="text-sm font-semibold capitalize text-[#f59e0b]">
             {product.category}
           </p>
-          <h1 className="mt-2 text-3xl font-bold text-[#37311d]">
+          <h1 className="mt-2 text-2xl font-bold text-[#37311d] sm:text-3xl">
             {product.title}
           </h1>
 
@@ -225,8 +230,8 @@ export default function ProductDetailPage() {
       </section>
 
       {relatedProducts.length > 0 && (
-        <section className="bg-white py-16">
-          <div className="mx-auto max-w-7xl px-6">
+        <section className="bg-white py-14 sm:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h2 className="text-2xl font-bold">Related Products</h2>

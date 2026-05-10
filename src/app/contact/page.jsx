@@ -71,26 +71,26 @@ export default function Contact() {
     <div className="bg-gray-50 text-[#37311d]">
       <Hero page="contact" />
 
-      <section className="bg-white py-16">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 text-center md:grid-cols-3">
+      <section className="bg-white py-14 sm:py-16">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 text-center sm:px-6 md:grid-cols-3">
           {[
             [FaPhoneAlt, "+91 23425 43210"],
             [FaEnvelope, "support@shoppymania.com"],
             [FaMapMarkerAlt, "Jaipur, Rajasthan"],
           ].map(([Icon, text]) => (
-            <div key={text} className="border border-gray-200 bg-white shadow-sm rounded-2xl p-6">
+            <div key={text} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
               <Icon className="mx-auto mb-3 text-2xl text-[#f59e0b]" />
-              <p>{text}</p>
+              <p className="break-words">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12">
           <form
             onSubmit={handleSubmit}
-            className="border border-gray-200 bg-white shadow-sm space-y-5 rounded-2xl p-8"
+            className="space-y-5 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-8"
           >
             <h2 className="text-2xl font-bold">Send Message</h2>
 
@@ -152,10 +152,10 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 text-center">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold">Why Contact Us?</h2>
-          <div className="mt-10 grid gap-10 md:grid-cols-3">
+      <section className="bg-gray-50 py-16 text-center sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold sm:text-3xl">Why Contact Us?</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               ["24/7 Support", "We are always available."],
               ["Quick Response", "We reply within minutes."],

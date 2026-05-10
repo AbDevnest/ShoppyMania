@@ -30,7 +30,7 @@ export default function CartPage() {
               alt="empty cart"
               width={160}
               height={160}
-              className="w-40 mx-auto mb-6 opacity-80"
+              className="mx-auto mb-6 h-auto w-40 opacity-80"
             />
 
             <h2 className="text-2xl font-bold mb-2">
@@ -67,7 +67,7 @@ export default function CartPage() {
                       alt={item.title}
                       width={80}
                       height={80}
-                      className="w-20 h-20 object-cover rounded"
+                      className="h-20 w-20 rounded object-cover"
                     />
 
                     <div className="min-w-0">

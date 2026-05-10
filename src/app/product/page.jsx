@@ -131,13 +131,12 @@ export default function ProductPage() {
 
       <section className="py-8 lg:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-
-        <div className="bg-[#0f172a] text-[#f3f4f6] grid gap-4 rounded-2xl p-6 sm:grid-cols-[1fr_auto] sm:items-center">
+        <div className="grid gap-4 rounded-2xl bg-[#0f172a] p-5 text-[#f3f4f6] sm:grid-cols-[1fr_auto] sm:items-center sm:p-6">
           <div>
             <p className="text-sm font-semibold text-[#fbbf24]">
               Live deals from DummyJSON
             </p>
-            <h2 className="mt-1 text-2xl font-bold">
+            <h2 className="mt-1 text-xl font-bold sm:text-2xl">
               Fresh collection, clean data, real cart behavior
             </h2>
             <p className="mt-2 text-sm text-gray-300">
@@ -255,18 +254,18 @@ export default function ProductPage() {
                     </span>
                   </div>
 
-                  <div className="grid gap-6 md:grid-cols-3">
+                  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                     {topDeals.map((product) => (
                       <div
                         key={product.id}
-                        className="group relative min-h-56 overflow-hidden rounded-2xl bg-white shadow-sm"
+                        className="group relative h-56 overflow-hidden rounded-2xl bg-white shadow-sm"
                       >
                         <Image
                           src={product.image}
                           alt={product.title}
-                          width={420}
-                          height={240}
-                          className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                          fill
+                          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                          className="object-cover transition duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 flex flex-col justify-end bg-black/45 p-4 text-white">
                           <span className="mb-2 w-fit rounded-full bg-[#f59e0b] px-3 py-1 text-xs font-semibold">
@@ -402,13 +401,15 @@ export default function ProductPage() {
                   <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-5">
                     {trending.map((product) => (
                       <div key={product.id} className="min-w-0 text-center">
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          width={180}
-                          height={140}
-                          className="h-32 w-full rounded-lg object-cover"
-                        />
+                        <div className="relative h-32 overflow-hidden rounded-lg bg-gray-50">
+                          <Image
+                            src={product.image}
+                            alt={product.title}
+                            fill
+                            sizes="(min-width: 768px) 20vw, 50vw"
+                            className="object-cover"
+                          />
+                        </div>
                         <p className="mt-2 truncate text-sm font-medium">
                           {product.title}
                         </p>

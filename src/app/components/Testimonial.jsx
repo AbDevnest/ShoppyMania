@@ -153,13 +153,13 @@ export default function Testimonial() {
                 <div className="flex min-h-[260px] flex-col items-center gap-4 rounded-2xl border border-gray-200 bg-white p-5 text-center shadow-sm transition duration-300 hover:shadow-xl sm:min-h-[190px] sm:flex-row sm:text-left">
 
                   {/* IMAGE */}
-                  <div className="flex-shrink-0">
+                  <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-full sm:h-28 sm:w-24 sm:rounded-xl">
                     <Image
                       src={t.img}
                       alt={t.name}
-                      width={90}
-                      height={90}
-                      className="h-20 w-20 rounded-full object-cover sm:h-28 sm:w-24 sm:rounded-xl"
+                      fill
+                      sizes="(min-width: 640px) 96px, 80px"
+                      className="object-cover"
                     />
                   </div>
 

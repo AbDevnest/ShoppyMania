@@ -35,13 +35,13 @@ export default function ProductCard({
   return (
     <article className="group flex min-h-full flex-col overflow-hidden rounded-[22px] border border-slate-200/80 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_24px_55px_rgba(15,23,42,0.13)]">
       <div className="relative m-3 overflow-hidden rounded-2xl bg-slate-50">
-        <Link href={`/product/${id}`} className="block">
+        <Link href={`/product/${id}`} className="relative block h-48">
           <Image
             src={image}
             alt={title}
-            width={300}
-            height={224}
-            className="h-46 w-full object-contain p-4 transition duration-500 group-hover:scale-105"
+            fill
+            sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+            className="object-contain p-4 transition duration-500 group-hover:scale-105"
           />
         </Link>
 

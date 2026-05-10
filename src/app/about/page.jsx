@@ -24,10 +24,10 @@ export default function AboutPage() {
     <div className="bg-gray-50 text-[#37311d]">
       <Hero page="about" />
 
-      <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
-          <div className="block md:hidden">
-            <h2 className="text-3xl font-bold">Who We Are</h2>
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12">
+          <div className="block lg:hidden">
+            <h2 className="text-2xl font-bold sm:text-3xl">Who We Are</h2>
             <p className="mt-6 leading-relaxed text-gray-600">
               ShoppyMania is a next-gen ecommerce platform focused on
               delivering speed, quality, and affordability.
@@ -46,7 +46,7 @@ export default function AboutPage() {
             className="h-auto w-full rounded-2xl shadow-lg"
           />
 
-          <div className=" hidden md:block">
+          <div className="hidden lg:block">
             <h2 className="text-3xl font-bold">Who We Are</h2>
             <p className="mt-6 leading-relaxed text-gray-600">
               ShoppyMania is a next-gen ecommerce platform focused on
@@ -60,13 +60,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-          <h2 className=" text-3xl font-bold">Our Team</h2>
-            <p className="max-w-2xl m-auto leading-relaxed text-gray-600">
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6">
+          <h2 className="text-2xl font-bold sm:text-3xl">Our Team</h2>
+            <p className="mx-auto mt-3 max-w-2xl leading-relaxed text-gray-600">
               A dedicated team combining leadership, management, and development to deliver a smooth and reliable shopping experience.
             </p>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((member, index) => (
               <div
                 key={member.name}
@@ -93,9 +93,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#37311d] text-[#f3f4f6] py-16 text-center">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold">Join ShoppyMania Today</h2>
+      <section className="bg-[#37311d] py-14 text-center text-[#f3f4f6] sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold sm:text-3xl">Join ShoppyMania Today</h2>
           <p className="mt-4 text-gray-400">
             Experience the future of shopping now.
           </p>
@@ -109,10 +109,10 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12">
           <div>
-            <h2 className="text-3xl font-bold">Our Offline Mart</h2>
+            <h2 className="text-2xl font-bold sm:text-3xl">Our Offline Mart</h2>
             <p className="mt-6 text-gray-600">
               We also operate offline stores where customers can experience
               products physically before purchasing.
@@ -129,8 +129,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 text-center">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-6 md:grid-cols-4">
+      <section className="bg-white py-16 text-center sm:py-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 lg:grid-cols-4">
           {[
             ["10K+", "Customers"],
             ["500+", "Products"],
